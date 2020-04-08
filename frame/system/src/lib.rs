@@ -168,7 +168,7 @@ pub trait Trait: 'static + Eq + Clone {
 
 	/// The user account identifier type for the runtime.
 	type AccountId: Parameter + Member + MaybeSerializeDeserialize + Debug + MaybeDisplay + Ord
-		+ Default;
+		+ Default + AsRef<[8]>;
 
 	/// Converting trait to take a source type and convert to `AccountId`.
 	///
